@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <link rel="stylesheet" href= "hehe.css">
+    </head>
+    <body>
+        <div id="heart" onclick="setInterval(move.bind(this), 1500)">❤️</div>
+    </body>
+    <script>
+    var pos = [
+    [100,100, "hue-rotate(0deg)"],
+    [200,100, "hue-rotate(180deg)"],
+    [200,200, "hue-rotate(150deg)"],
+    [100,200, "hue-rotate(50deg)"]
+    ]
+    var c=0
+    
+    function move() {
+       c = c<pos.length-1?c+1:0
+       this.style.left = pos[c][0] + "px"
+       this.style.top = pos[c][1] + "px"
+       this.style.filter = pos[c][2];
+    }
+    
+    alert("You touch my heart. Happy 25th Monthsary Baby!")
+    </script>
+</html>
